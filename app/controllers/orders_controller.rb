@@ -2,6 +2,9 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
+    @items = LineItem.where("order_id": params[:id])
+    @products = Product.joins("JOIN line_items ON products.id = product_id").where("line_items.order_id": params[:id])
+    @order_total_cents = @items.sum {|value| value.total_price_cents}
   end
 
   def create
