@@ -103,6 +103,18 @@ form.button_to {
     text-transform: uppercase;
     font-style: italic;
   }
+
+  .navbar-nav {
+    align-items: center;
+  }
+}
+
+.login {
+  color: rgba(255, 255, 255, 0.55);
+
+  a {
+    color: rgba(255, 255, 255, 0.55);
+  }
 }
 
 .page-header {
