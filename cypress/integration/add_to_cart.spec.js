@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe("Jungle product page", () => {
+describe("Jungle add to cart", () => {
   it("visits the home page", () => {
     cy.visit("/");
   });
@@ -13,8 +13,10 @@ describe("Jungle product page", () => {
     cy.get(".products article").should("have.length", 2);
   });
 
-  it("Navigate to product page", () => {
-    cy.get(".products article").first().click();
-    cy.get(".product-detail").should("be.visible");
+  it("Click add to cart button", () => {
+    cy.contains("My Cart (0)").should("exist")
+    cy.get(".button_to button").first().click({ force: true });
+    cy.contains("My Cart (0)").should("not.exist")
+    cy.contains("My Cart (1)").should("exist")
   });
 });
