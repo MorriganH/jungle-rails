@@ -2,6 +2,12 @@
 
 A mini e-commerce application built with Rails 6.1 for purposes of teaching Rails by example.
 
+## Screenshots
+
+!["The banner and nav bar on the home page"](docs/jungle-header.png)
+!["List of items on the home page"](docs/jungle-main.png)
+!["Product page for an individual item"](docs/jungle-item.png)
+
 ## Setup
 
 1. Run `bundle install` to install dependencies
